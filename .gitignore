@@ -1,0 +1,145 @@
+# =========================================================================
+# === General ===
+# =========================================================================
+# Backup files
+*~
+*.bak
+*.old
+*.orig
+
+# Temporary files
+*.tmp
+*.temp
+
+# =========================================================================
+# === Build Artifacts (CMake, Compilers, Linkers) ===
+# =========================================================================
+# Ignore the entire build directory (most important rule!)
+# Use /build/ to only ignore the top-level build directory
+/build/
+
+# Other common build directory names
+/_build/
+/out/
+/install/
+/deploy/
+
+# CMake generated files (often inside build/, but good practice to list)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+*.make
+
+# Compiled object files
+*.o
+*.obj
+*.lo
+
+# Precompiled header files
+*.pch
+*.gch
+
+# Static libraries
+*.a
+*.lib
+
+# Dynamic libraries / Shared Objects / Executables
+*.dll
+*.so
+*.dylib
+*.exe
+*.app/
+*.ipa
+
+# Debugging files
+*.pdb
+*.idb
+*.ilk
+*.exp
+*.map
+*.dsym/
+
+# =========================================================================
+# === Qt / Qt Creator Specific ===
+# =========================================================================
+# Qt Creator user settings (project specific)
+*.pro.user
+*.pro.user.*
+CMakeLists.txt.user*
+
+# Qt Creator autosave files
+*.autosave
+
+# Generatedmoc/ui/qrc files (should be in build dir, but can ignore explicitly)
+# moc_*.cpp
+# *.moc
+# ui_*.h
+# qrc_*.cpp
+
+# Qt specific lock files
+*.lock
+
+# =========================================================================
+# === Project Specific: llmstudio ===
+# =========================================================================
+# Ignore the final Inno Setup installer executable
+llmstudio_Setup_*.exe
+/Output/ # If Inno Setup writes to a subfolder named Output
+
+# Ignore large model files in the source directory.
+# It's CRUCIAL not to commit large binary models to Git.
+# Add specific model file extensions if known (e.g., *.gguf, *.bin)
+/models/
+# *.gguf
+# *.bin
+
+# Consider ignoring the source 'binaries' directory IF it contains
+# large, externally managed binaries/executables that shouldn't be in Git.
+# If 'binaries' contains small essential assets you *want* versioned, comment out or remove this line.
+/binaries/
+
+# =========================================================================
+# === Operating System Specific ===
+# =========================================================================
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# Adding common log file patterns
+*.log
+
+# =========================================================================
+# === IDE / Editor Specific ===
+# =========================================================================
+# VS Code
+.vscode/
+
+# Visual Studio (less relevant for pure CMake, but good for completeness if opened)
+*.suo
+*.user
+*.vcxproj.user
+*.[Cc]ache
+*_i.c
+*_p.c
+*.ncb
+*.opensdf
+*.sdf
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Xx]64/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]64/
+# JetBrains CLion / IntelliJ IDEA
+.idea/
+
+# =========================================================================
